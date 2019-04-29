@@ -12,15 +12,20 @@ namespace Lagerstyring.Controllers{
             return View();
         }
 
-        public IActionResult About(){
+        public IActionResult Merchandise(){
             ViewData["Message"] = "Your application description page.";
 
             return View();
         }
 
-        public IActionResult Contact(){
+        public IActionResult Sale(){
             ViewData["Message"] = "Your contact page.";
 
+            return View();
+        }
+
+        public IActionResult Purchase()
+        {
             return View();
         }
 
