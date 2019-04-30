@@ -22,8 +22,18 @@ namespace Lagerstyring.Controllers{
                     }                                    
                 }
             }
+
+            updateStock();
+            savePurchase();
         }
-        
+
+        public void updateStock(){
+            
+        }
+
+        public void savePurchase(){
+            
+        }
 
         //Getter and Setter
         public int AmountOfSizes{
