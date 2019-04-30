@@ -17,6 +17,7 @@
     </environment>
 </head>
 <body>
+    <!--Start of navbar-->
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -31,15 +32,49 @@
             <div style="float:right" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">OVERSIGT</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Merchandise">MERCHANDISE</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Sale">SALG</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Purchase">INDKØB</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Merchandise">
+                            MERCHANDISE
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Løbs t-shirt</a></li>
+                            <li><a href="#">PLan t-shirt</a></li>
+                            <li><a href="#">Løbs mærke</a></li>
+                            <li><a href="#">PLan mærke</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Sale">
+                            SALG
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Løbs t-shirt</a></li>
+                            <li><a href="#">PLan t-shirt</a></li>
+                            <li><a href="#">Løbs mærke</a></li>
+                            <li><a href="#">PLan mærke</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" asp-area="" asp-controller="Home" asp-action="Purchase">
+                            INDKØB
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Løbs t-shirt</a></li>
+                            <li><a href="#">PLan t-shirt</a></li>
+                            <li><a href="#">Løbs mærke</a></li>
+                            <li><a href="#">PLan mærke</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <!--End of navbar-->
 
-    <partial name="_CookieConsentPartial" />
+<partial name="_CookieConsentPartial" />
 
     <div class="container body-content">
         @RenderBody()
@@ -70,6 +105,6 @@
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
 
-    @RenderSection("Scripts", required: false)
+    @RenderSection("Scripts", false)
 </body>
 </html>

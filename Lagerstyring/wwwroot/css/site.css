@@ -5,7 +5,8 @@ body {
     padding-bottom: 20px;
 }
 
+/* Color and font weight of the navbar buttons' text */
 .nav.navbar-nav li a{
     color: #FF6900;
-    
+    font-weight: bold;
 }
