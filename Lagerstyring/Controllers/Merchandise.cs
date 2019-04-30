@@ -27,6 +27,12 @@ namespace Lagerstyring.Controllers{
                     }
                 }
             }
+            
+            saveToStock();
+        }
+
+        public void saveToStock(){
+            
         }
 
         public static int countAmountOfMerch(){
@@ -55,8 +61,12 @@ namespace Lagerstyring.Controllers{
         public double calculateTotalProfit(int merchType){
             return calculateTotalIncome(merchType) - calculateTotalExpense(merchType);
         }
-        
-        
+
+        public void editStock(int merchType, int antal, string description){
+            
+        }
+
+
 
 
         //Getter og Setter
