@@ -18,10 +18,6 @@ namespace Lagerstyring.Controllers{
             return View();
         }
 
-        public IActionResult MerchandisePLanMark(){
-            return View();
-        }
-
         public IActionResult Sale(){
             ViewData["Message"] = "Your contact page.";
 
