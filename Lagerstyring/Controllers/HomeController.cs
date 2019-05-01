@@ -1,10 +1,14 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Lagerstyring.Models;
 
 namespace Lagerstyring.Controllers{
     public class HomeController : Controller{
         public IActionResult Index(){
+            Boolean[] test2 = new Boolean[0];
+            Merchandise test = new Merchandise("Løbsmærker", 25, test2);
+            ViewData["Message"] = test.Name;
             return View();
         }
 
@@ -14,8 +18,7 @@ namespace Lagerstyring.Controllers{
             return View();
         }
 
-        public IActionResult MerchandisePLanMark()
-        {
+        public IActionResult MerchandisePLanMark(){
             return View();
         }
 
@@ -25,8 +28,7 @@ namespace Lagerstyring.Controllers{
             return View();
         }
 
-        public IActionResult Purchase()
-        {
+        public IActionResult Purchase(){
             return View();
         }
 
