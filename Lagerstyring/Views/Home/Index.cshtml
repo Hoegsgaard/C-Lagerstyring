@@ -1,7 +1,40 @@
 ﻿@{
-    ViewData["Title"] = "Oversigt";
+    ViewData["Title"] = "Invictus Lagerstyring";
 }
 
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css"/>
+</head>
+<body>
+    <div class="row">
+        <div class="col-sm-4" style="padding-left: 0; padding-right: 0;">
+            <div id="welcome-text">
+                <div id="text">
+                    <h2>@ViewData["Title"]</h2>
+                    <p>Her kan du få et overblik over lageret af Invictus merchandise, priser, hvor meget der er tjent og meget mere.</p>
+                    <p>Klik ind på de forskellige faner, for at få et mere detaljeret overblik over hver merchandise.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    This is some text within a card body.
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card-body">
+                This is some text within a card body.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
 

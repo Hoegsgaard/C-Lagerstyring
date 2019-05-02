@@ -6,14 +6,13 @@ using Lagerstyring.Models;
 namespace Lagerstyring.Controllers{
     public class HomeController : Controller{
         public IActionResult Index(){
-            Boolean[] test2 = new Boolean[0];
-            Merchandise test = new Merchandise("Løbsmærker", 25, test2);
-            ViewData["Message"] = test.Name;
             return View();
         }
 
         public IActionResult Merchandise(){
-            ViewData["Message"] = "Your application description page.";
+            Boolean[] test2 = new Boolean[0];
+            Merchandise test = new Merchandise("Løbsmærker", 25, test2);
+            ViewData["Message"] = test.Name;
 
             return View();
         }
@@ -21,6 +20,12 @@ namespace Lagerstyring.Controllers{
         public IActionResult Sale(){
             ViewData["Message"] = "Your contact page.";
 
+            return View();
+        }
+
+        public IActionResult NewMerch()
+        {
+            ViewData["Message"] = "Welcome to new item";
             return View();
         }
 

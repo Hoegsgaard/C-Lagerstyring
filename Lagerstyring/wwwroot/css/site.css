@@ -10,3 +10,24 @@ body {
     color: #FF6900;
     font-weight: bold;
 }
+
+/*------- Styles for Index page -------*/
+/* Style for the black text box on the welcome page */
+#welcome-text {
+    background-color: #222222;
+    color: white;
+    width: 100%;
+    height: 650px;
+}
+
+/* Style for the text div on the welcome page */
+#text {
+    text-align: center;
+    padding: 100px;
+}
+
+/*------- Styles for NewMerch page -------*/
+/* Input form */
+.form-group {
+    width: 30%;
+}
