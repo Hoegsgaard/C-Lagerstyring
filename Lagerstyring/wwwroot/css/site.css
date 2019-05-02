@@ -11,6 +11,10 @@ body {
     font-weight: bold;
 }
 
+.dropdown-menu li a{
+    color: #222222;
+}
+
 /*------- Styles for Index page -------*/
 /* Style for the black text box on the welcome page */
 #welcome-text {
@@ -29,5 +33,28 @@ body {
 /*------- Styles for NewMerch page -------*/
 /* Input form */
 .form-group {
-    width: 30%;
+    padding-left: 15px;
+    width: 100%;
+}
+
+.checkbox {
+    padding-left: 15px;
+}
+
+#container {
+    height: 590px;
+}
+
+.btn-primary {
+    background-color: #FF6900;
+    border: none;
+    margin: 15px;
+}
+
+.btn-primary:hover {
+    background-color: rgba(255, 105, 0, 0.81);;
+}
+
+.btn-primary:active {
+    background-color: #924500;
 }

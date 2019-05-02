@@ -7,11 +7,59 @@
 
 <h2>@ViewData["Title"]</h2>
 
-<div class="form-group">
-    <label for="usr">Navn:</label>
-    <input type="text" class="form-control" id="usr" placeholder="Indtast navn">
-</div>
+<div class="row">
+    <div class="col-sm-4" style="padding-left: 0; padding-right: 0;">
+        <div id="container">
+        <div class="form-group">
+            <label for="usr">Navn:</label>
+            <input type="text" class="form-control" id="usr" placeholder="Indtast navn">
+        </div>
 
-<div class="checkbox">
-    <label><input type="checkbox" value="">Tilføj størrelser</label>
+            <div class="checkbox">
+                <label data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <input type="checkbox" value="">Tilføj størrelser</label>
+            </div>
+            <div id="collapseOne" aria-expanded="false" class="collapse">
+                <div class="well">
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">8-10</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">12-14</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">XS</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">S</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">M</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">L</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">XL</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">XXL</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">XXXL</label>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">XXXXL</label>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary">Primary</button>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="form-group">
+            <label for="usr">Pris:</label>
+            <input type="text" class="form-control" id="usr" placeholder="Indtast pris">
+        </div>
+    </div>
 </div>
