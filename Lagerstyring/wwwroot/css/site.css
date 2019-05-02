@@ -65,5 +65,5 @@ body {
 }
 
 .btn-primary:active {
-    background-color: #924500;
+    background-color: #924500!important;
 }
