@@ -9,10 +9,28 @@ namespace Lagerstyring.Controllers{
             return View();
         }
 
-        public IActionResult Merchandise(){
-            Boolean[] test2 = new Boolean[3];
+        public IActionResult Merchandise(int id){
+            //Test data
+            Boolean[] test2 = new Boolean[10];
+            test2[0] = false;
+            test2[1] = false;
+            test2[2] = false;
+            test2[3] = true;
+            test2[4] = true;
+            test2[5] = true;
+            test2[6] = false;
+            test2[7] = false;
+            test2[8] = false;
+            test2[9] = false;
             Merchandise test = new Merchandise("Løbsmærker", 25, test2);
-            ViewData["Message"] = test.Name;
+            //Test data slut
+
+            if (id == 1){
+                ViewData["Message"] = test.Name;
+            }
+            else{
+                ViewData["Message"] = test.SalePrice;
+            }
 
             return View();
         }

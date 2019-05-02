@@ -12,20 +12,13 @@ namespace Lagerstyring.Controllers{
         private int merchID;
 
         public Merchandise(String name, double salePrice, Boolean[] size){
+            merchID = ++amountOfMerch;
             this.name = name;
             this.salePrice = salePrice;
             this.size = new Boolean[size.Length];
-            merchID = ++amountOfMerch;
             if (size.Length > 0){
                 this.size = new Boolean[amountOfSizes];
-                for (int i = 0; i < amountOfSizes; i++){
-                    if (size[i] == true){
-                        this.size[i] = true;
-                    }
-                    else{
-                        this.size[i] = false;
-                    }
-                }
+                this.size = size;
             }
             
             saveToStock();
