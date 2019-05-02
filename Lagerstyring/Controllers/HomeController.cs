@@ -10,7 +10,7 @@ namespace Lagerstyring.Controllers{
         }
 
         public IActionResult Merchandise(){
-            Boolean[] test2 = new Boolean[0];
+            Boolean[] test2 = new Boolean[3];
             Merchandise test = new Merchandise("Løbsmærker", 25, test2);
             ViewData["Message"] = test.Name;
 
