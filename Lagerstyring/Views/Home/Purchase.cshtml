@@ -6,7 +6,25 @@
 
 <div class="row">
     <div class="col-sm-4">
-        <p>Her kan tilføjes et indkøb for hver merchandise</p>
-        
+        <p>Her kan tilføjes et indkøb af hver merchandise</p>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" id="sale-btn" type="button" data-toggle="dropdown">Vælg merchandise...
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Løbs t-shirt</a></li>
+                <li><a href="#">PLan t-shirt</a></li>
+                <li><a href="#">Løbs mærke</a></li>
+                <li><a href="#">PLan mærke</a></li>
+            </ul>
+        </div>
+        <div class="form-group-sale">
+            <label for="usr">Antal:</label>
+            <input type="text" class="form-control" id="usr" placeholder="Indtast antal solgte merchandise">
+        </div>
+        <div class="form-group-sale">
+            <label for="usr">Pris:</label>
+            <input type="text" class="form-control" id="usr" placeholder="Indtast pris">
+        </div>
+        <button id="sale-btn2" type="button" class="btn btn-primary">Tilføj køb</button>
     </div>
 </div>
