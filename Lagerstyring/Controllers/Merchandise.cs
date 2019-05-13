@@ -59,26 +59,30 @@ namespace Lagerstyring.Controllers{
             
         }
 
+        public Merchandise findMerchById(int ID){
+            return this;
+        }
 
-
-
-        //Getter og Setter
+        public int[] getStock(int merchType){
+            int numOfSizes = 1;
+            int[] stock = new int[numOfSizes];
+            
+            return stock;
+        }
+        
         public string Name{
             get => name;
             set => name = value;
         }
+
         public double SalePrice{
             get => salePrice;
             set => salePrice = value;
         }
-        public Boolean[] Size{
+
+        public bool[] Size{
             get => size;
             set => size = value;
         }
-        public int Antal{
-            get => antal;
-            set => antal = value;
-        }
-        
     }
 }

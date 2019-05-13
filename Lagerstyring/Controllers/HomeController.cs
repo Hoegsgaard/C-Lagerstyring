@@ -1,7 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Lagerstyring.Models;
+using Microsoft.Extensions.Logging;
+
+using Firebase.Database;
+using Firebase.Database.Query;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Lagerstyring.Controllers{
     public class HomeController : Controller{
@@ -9,7 +16,7 @@ namespace Lagerstyring.Controllers{
             return View();
         }
 
-        public IActionResult Merchandise(int id){
+        public async Task<IActionResult> Merchandise(int id){
             //Test data
             Boolean[] test2 = new Boolean[10];
             test2[0] = false;
@@ -25,8 +32,14 @@ namespace Lagerstyring.Controllers{
             Merchandise test = new Merchandise("Løbsmærker", 25, test2);
             //Test data slut
 
+            var firebaceClient = new FirebaseClient("https://invictuslagerstyring.firebaseio.com/");
+            var result = await firebaceClient.Child("Name " + test.Name).PostAsync(test);
+
+            var ud = await firebaceClient.Child("Name " + test.Name).Child("Name").OnceAsync<Merchandise>();
+            var testliste = new List<Merchandise>();
+
             if (id == 1){
-                ViewData["Message"] = test.Name;
+                ViewData["Message"] = ud.GetType().ToString();
             }
             else{
                 ViewData["Message"] = test.SalePrice;
@@ -41,8 +54,7 @@ namespace Lagerstyring.Controllers{
             return View();
         }
 
-        public IActionResult NewMerch()
-        {
+        public IActionResult NewMerch(){
             ViewData["Message"] = "Welcome to new item";
             return View();
         }
@@ -53,7 +65,7 @@ namespace Lagerstyring.Controllers{
 
         public IActionResult Privacy(){
             return View();
-        }
+        } 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error(){
